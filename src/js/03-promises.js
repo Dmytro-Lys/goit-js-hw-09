@@ -62,6 +62,7 @@ const submitForm = (e) => {
     const args = toNumberArgs(e.currentTarget.elements);
     if (!checkArgs(args)) return;
     createPromises(args);
+    e.currentTarget.reset();
 }
 
 form.addEventListener("submit", submitForm);
